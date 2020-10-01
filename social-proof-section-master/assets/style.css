@@ -22,8 +22,8 @@ body {
 }
 /* MAIN BODY */
 .container {
-  margin: 3rem 7rem;
-  min-height: calc(100vh - 9rem);
+  margin: 0 7rem;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -176,10 +176,4 @@ img {
   .review.second, .review.third {
     margin-top: 0;
   }
-}
-
-/* FOOTER */
-footer {
-  height: 3rem;
-  text-align: center;
 }
