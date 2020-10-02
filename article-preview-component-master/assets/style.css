@@ -1,0 +1,17 @@
+:root {
+  --dark-blue: hsl(217, 19%, 35%);
+  --desat-dark-blue: hsl(214, 17%, 51%);
+  --gray-blue: hsl(212, 23%, 69%);
+  --light-blue: hsl(210, 46%, 95%);
+}
+
+*{
+  margin: 0; 
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 13px;
+  font-family: 'Manrope', sans-serif;
+}
