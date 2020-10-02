@@ -1,24 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 
 :root {
-  --primary-clr: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+  --primary-clr: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
   --pale-blue: hsl(243, 100%, 93%);
   --grey-blue: hsl(229, 7%, 55%);
   --dark-blue: hsl(228, 56%, 26%);
   --darkest-blue: hsl(229, 57%, 11%);
+  --border-radius: 0.8rem;
 }
 
-*, ::before, ::after {
+*,
+::before,
+::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  font-size: 15px;
+  font-size: 14px;
   font-family: 'Raleway', sans-serif;
   position: relative;
-  background-color: var(--dark-blue);
+  background-color: var(--darkest-blue);
   color: var(--pale-blue);
 }
 
@@ -28,6 +31,153 @@ body {
   align-items: center;
   width: 100%;
   height: 100vh;
-  background: url('./images/bg-desktop.png') no-repeat center botoom;
-  background-size: 100% 50%;
+  background: url('./images/bg-mobile.png') center / cover no-repeat;
+}
+
+.data-storage-component {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 900px;
+  margin: 1.5rem;
+}
+
+/* ICONS CARD - LEFT BOX */
+.icons-card {
+  background: var(--dark-blue);
+  border-radius: var(--border-radius);
+  border-top-right-radius: 5rem;
+  padding: 2.5rem 5rem 2.5rem 2.5rem;
+  max-width: 900px;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.logo {
+  margin-bottom: 2rem;
+}
+
+.icons {
+  display: flex;
+}
+
+.icon {
+  border: none;
+  padding: 0.7rem;
+  background: var(--darkest-blue);
+  margin-right: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+/* PROGRESS BAR COMPONENT */
+.progress-bar-component {
+  position: relative;
+  background: var(--dark-blue);
+  padding: 2.5rem;
+  border-radius: var(--border-radius);
+}
+
+.data-desc {
+  margin-bottom: 1rem;
+}
+
+.progress-bar {
+  background: var(--darkest-blue);
+  border-radius: var(--border-radius);
+  margin-bottom: 0.5rem;
+  height: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.progress-bar-content {
+  background: var(--primary-clr);
+  border-radius: var(--border-radius);
+  height: 0.9rem;
+  margin: 2px;
+  width: 75%;
+}
+
+.controller {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: #fff;
+  margin: 1px 3px 1px auto;
+}
+
+.progress-bar-label {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.progress-notification {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:  #fff;
+  padding: 0.7rem 1.3rem;
+  border-radius: var(--border-radius);
+  font-weight: 700;
+  left: 0;
+  right: 0; 
+  width: 180px;
+  margin: auto;
+}
+.notification-int{
+  color: var(--darkest-blue);
+  font-size: 2.3rem;
+  margin-right: 0.5rem;
+}
+.notification-text {
+  color: var(--grey-blue);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+}
+
+@media screen and (min-width: 700px) {
+
+  .container {
+    background: url('./images/bg-desktop.png') no-repeat center bottom;
+    background-size: 100% 50%;
+  }
+
+  .data-storage-component {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .icons-card {
+    flex: 1;
+    margin-bottom: 0;
+  }
+
+  .progress-bar-component {
+    flex: 2;
+    margin: 2rem 0 0 2rem;
+  }
+
+  .progress-notification {
+    top: -3rem;
+    left: inherit;
+    right: 2.5rem;
+  }
+
+  .progress-notification::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 60%;
+    border: 1.5rem solid;
+    border-color: #fff #fff transparent transparent
+  }
 }
