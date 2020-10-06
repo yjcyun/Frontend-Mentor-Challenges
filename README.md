@@ -1,6 +1,6 @@
 # Frontend Mentor Challenges Solutions
 
-👩‍💻 This is a collection of my [Frontend Mentor](https://www.frontendmentor.io/) solutions. 
+📒 This is a collection of my [Frontend Mentor](https://www.frontendmentor.io/) solutions. 
 
 All the solutions are hosted on Vercel.
 
@@ -10,7 +10,5 @@ All the solutions are hosted on Vercel.
 3. [Fylo Data Storage Component](https://frontendmentor-fylo-data-storage-orpin.vercel.app/)
 4. [Base Apparel Coming Soon](https://base-apparel-coming-soon-master-murex.vercel.app/)
 5. [Four Card Features](https://four-card-feature-section-master-flax.vercel.app/)
-6. [Into Component with Signup Form]()
-
-
-
+6. [Into Component with Signup Form](https://intro-component-with-signup-form-master-delta.vercel.app/)
+7. [Single Price Grid Component](https://single-price-grid-component-master-kappa-eight.vercel.app/)

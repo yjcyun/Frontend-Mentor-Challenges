@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+  --cyan: hsl(179, 62%, 43%);
+  --yellow: hsl(71, 73%, 54%);
+  --light-gray: hsl(204, 43%, 93%);
+  --gray-blue: hsl(218, 22%, 67%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Karla', sans-serif;
+  background: var(--light-gray);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  max-width: 650px;
+  margin: 0 auto;
+  width: 85vw;
+}
+
+.top {
+  background: #fff;
+  padding: 2rem 1.5rem;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.top__title {
+  color:var(--cyan);
+  font-size: 1.4rem;
+}
+
+.top__subtitle {
+  color: var(--yellow);
+  margin: 1rem 0;
+  font-size: 1rem;
+}
+
+.top__text {
+  color:var(--gray-blue);
+  font-size: 0.9rem;
+  line-height: 2;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: #fff;
+}
+
+.bottom__left {
+  background: var(--cyan);
+  flex: 1;
+  padding: 1.5rem;
+}
+
+.bottom__title {
+  margin-bottom:1rem;
+}
+
+.bottom__price {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+.bottom__price .price {
+  font-size: 2rem;
+  margin-right: 0.7rem;
+  font-weight: 700;
+}
+
+.bottom__price .desc {
+  color: 	rgba(229, 239, 245,0.7);
+}
+
+.bottom__btn {
+  margin-top: 1.5rem;
+  padding: 1rem 1rem;
+  width: 100%;
+  background: var(--yellow);
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1rem;
+  font-family: 'Karla', sans-serif;
+}
+
+.bottom__right {
+  background: rgb(42, 178, 175, 0.8);
+  flex: 1;
+  padding: 1.5rem;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.bottom__right li {
+  list-style: none;
+  color: var(--light-gray);
+  margin: 2px 0;
+  font-size: 0.9rem;
+}
+
+footer {
+  position: absolute;
+  bottom: 1rem;
+  width: 70%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media screen and (min-width: 768px) {
+  .top {
+    padding: 2.2rem;
+  }
+
+  .top__title {
+    font-size: 1.5rem;
+  }
+
+  .top__subtitle {
+    margin: 1.5rem 0 0.8rem;
+    font-size: 1.1rem;
+  }
+
+  .top__text {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .bottom {
+    flex-direction: row;
+  }
+  .bottom__left {
+    border-bottom-left-radius: 5px;
+    padding:2.2rem;
+  }
+  
+  .bottom__right {
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 0;
+    padding:2.2rem;
+  }
+}
