@@ -12,3 +12,4 @@ All the solutions are hosted on Vercel.
 5. [Four Card Features](https://four-card-feature-section-master-flax.vercel.app/)
 6. [Into Component with Signup Form](https://intro-component-with-signup-form-master-delta.vercel.app/)
 7. [Single Price Grid Component](https://single-price-grid-component-master-kappa-eight.vercel.app/)
+7. [Huddle Landing Page With Single Introductory Section](https://huddle-landing-page-with-single-introductory-section-master.yjcyun.vercel.app/)
