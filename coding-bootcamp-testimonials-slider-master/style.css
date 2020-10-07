@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+:root {
+  --dark-blue: hsl(240, 38%, 20%);
+  --grey-blue: hsl(240, 18%, 77%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+.slide {
+  min-height: 100vh;
+  background: url(./images/pattern-bg.svg), url('./images/pattern-curve.svg');
+  background-position: top 1rem center, bottom left;
+  background-repeat: no-repeat;
+  background-size: 84% auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1170px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.slide__body {
+  flex: 1;
+  order: 2;
+  padding: 4.5rem 2rem;
+  background: url('./images/pattern-quotes.svg');
+  background-repeat: no-repeat;
+  background-position: top 2.8rem center;
+  background-size: 4rem;
+  text-align: center;
+}
+
+.author {
+  font-size: 0.9rem;
+}
+
+.job {
+  color: var(--grey-blue);
+  font-weight: 500;
+  margin-top: 3px;
+}
+
+.review {
+  color: var(--dark-blue);
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+
+.slide__img {
+  max-width: 250px;
+  height: 250px;
+  margin-top: 3rem;
+  position: relative;
+  border-radius: 0.5rem;
+}
+
+.slide__img img {
+  border-radius: 0.5rem;
+  height: 100%;
+  box-shadow: 0 4rem 5rem -3rem rgba(36, 36, 113, 0.5);
+}
+
+.slide__img__cta {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -1.1rem;
+  display: flex;
+  background: #fff;
+  padding: 0.6rem 0.5rem;
+  border-radius: 2rem;
+}
+
+.slide__img__cta__btn.prev {
+  margin: 0 1rem 0 0.5rem;
+}
+
+.slide__img__cta__btn.next {
+  margin: 0 0.5rem 0 1rem;
+}
+
+.attribution {
+  font-size: 0.8rem;
+  position: absolute;
+  bottom: 1rem;
+  width: 60%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 300;
+}
+
+.attribution a {
+  color: var(--dark-blue);
+  text-decoration: none;
+}
+
+@media screen and (min-width: 996px) {
+  .slide {
+    background-position: top 3.4rem right 4rem, bottom left;
+    background-size: auto;
+  }
+
+  .container {
+    flex-direction: row;
+  }
+
+  .slide__body {
+    flex: 1;
+    order: 1;
+    margin-left: -2rem;
+    margin-right: -6rem;
+    z-index: 2;
+    text-align: left;
+    background-position: top left 8rem;
+    background-size: 8rem;
+  }
+
+  .review {
+    font-size: 32px;
+    text-align: left;
+  }
+
+  .author {
+    display: flex;
+    align-items: flex-end;
+    font-size: 1.1rem;
+  }
+
+  .job {
+    margin-left: 0.5rem;
+  }
+
+  .slide__img {
+    order: 2;
+    max-width: 750px;
+    height: auto;
+    margin-top: 0;
+    z-index: 1;
+  }
+
+  .slide__img__cta {
+    left: 8rem;
+    padding: 1.1rem;
+  }
+
+  .slide__img__cta__btn.prev {
+    margin: 0 1.3rem 0 0.5rem;
+  }
+
+  .slide__img__cta__btn.next {
+    margin: 0 0.5rem 0 1.3rem;
+  }
+}
+
+.fade-in {
+  animation: fadeIn ease 0.7s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
