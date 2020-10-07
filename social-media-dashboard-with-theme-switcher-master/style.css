@@ -37,17 +37,11 @@ body {
   font-family: 'Inter', sans-serif;
   font-size: 14px;
   max-width: 1170px;
-  margin: auto;
-  padding: 2rem 1.5rem;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
   background: var(--background);
 }
 
-.main {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  justify-content: center;
-}
 
 .flex {
   display: flex;
@@ -257,9 +251,6 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  body {
-    padding: 0 1.5rem;
-  }
   .dashboard__cards {
     grid-gap: 2rem;
   }
