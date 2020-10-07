@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- Custom CSS -->
+  <link rel='stylesheet' href='./style.css'>
+  <!-- Title -->
+  <title>Frontend Mentor | Social Media Dashboard</title>
+
+</head>
+
+<body>
+  <main class='main'>
+    <!-- Dashboard -->
+    <div class='dashboard'>
+      <!-- Heading -->
+      <div class='dashboard__heading flex justify-space-between'>
+        <div>
+          <h1>Social Media Dashboard</h1>
+          <p class='bold-light-text-color'>Total Followers: 23,004</p>
+        </div>
+        <div class='dashboard__toggle'>
+          <span class='bold-light-text-color'>Dark Mode</span>
+          <input type='checkbox'  class='toggle-checkbox'>
+          <label for='toggle-switch' class='toggle-label' id='toggle-switch'></label>
+        </div>
+      </div>
+      <!-- /Heading -->
+      <!-- Cards -->
+      <div class='dashboard__cards'>
+        <!-- Card -->
+        <div class='dashboard__card card facebook'>
+          <div class='bar'></div>
+          <div class='dashboard__card__social-media flex justify-center'>
+            <img src='./images/icon-facebook.svg' alt='Facebook'>
+            <span class='username small-font-size'>@nathanf</span>
+          </div>
+          <p class='num'>1987</p>
+          <p class='followers'>Followers</p>
+          <p class='status flex justify-center'>
+            <img src='./images/icon-up.svg' alt='Increase'>
+            <span class='small-font-size up'>12 Today</span>
+          </p>
+        </div>
+        <!-- /Card -->
+        <!-- Card -->
+        <div class='dashboard__card card twitter'>
+          <div class='bar'></div>
+          <div class='dashboard__card__social-media flex justify-center'>
+            <img src='./images/icon-twitter.svg' alt='Twitter'>
+            <span class='username small-font-size'>@nathanf</span>
+          </div>
+          <p class='num'>1044</p>
+          <p class='followers'>Followers</p>
+          <p class='status flex justify-center'>
+            <img src='./images/icon-up.svg' alt='Increase'>
+            <span class='small-font-size up'>99 Today</span>
+          </p>
+        </div>
+        <!-- /Card -->
+        <!-- Card -->
+        <div class='dashboard__card card instagram'>
+          <div class='bar'></div>
+          <div class='dashboard__card__social-media flex justify-center'>
+            <img src='./images/icon-instagram.svg' alt='Instagram'>
+            <span class='username small-font-size'> @realnathanf</span>
+          </div>
+          <p class='num'>11k</p>
+          <p class='followers light-text-color'>Followers</p>
+          <p class='status flex justify-center'>
+            <img src='./images/icon-up.svg' alt='Increase'>
+            <span class='small-font-size up'>1099 Today</span>
+          </p>
+        </div>
+        <!-- /Card -->
+        <!-- Card -->
+        <div class='dashboard__card card youtube'>
+          <div class='bar'></div>
+          <div class='dashboard__card__social-media flex justify-center'>
+            <img src='./images/icon-youtube.svg' alt='Youtube'>
+            <span class='username small-font-size'>Nathan F.</span>
+          </div>
+          <p class='num'>8239</p>
+          <p class='followers light-text-color'>Subscribers</p>
+          <p class='status flex justify-center'>
+            <img src='./images/icon-down.svg' alt='Decrease'>
+            <span class='small-font-size down'>144 Today</span>
+          </p>
+        </div>
+        <!-- /Card -->
+      </div>
+      <!-- /Cards -->
+    </div>
+    <!-- /Dashboard -->
+
+    <!-- Overview -->
+    <div class='overview'>
+      <div class='dashboard__heading'>
+        <h2 class='bold-light-text-color'>Overview - Today</h2>
+      </div>
+      <div class='dashboard__cards' id='cards-container'>
+        <!-- Card -->
+        <div class='overview__card card'>
+          <div class='flex justify-space-between'>
+            <h5 class='bold-light-text-color' id='name'>Page Views</h5>
+            <img src='./images/icon-facebook.svg' alt='' id='icon'>
+          </div>
+          <div class='flex justify-space-between'>
+            <div class='num' id='num'>87</div>
+            <div class='status flex justify-center'>
+              <img src='./images/icon-up.svg' alt='' id='status-sign'>
+              <span class='up' id='status'>3%</span>
+            </div>
+          </div>
+        </div>
+        <!-- /Card -->
+      </div>
+    </div>
+    <!-- /Overview -->
+  </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://christinayun.ca">Christina Yun</a>.
+  </div>
+
+  <script src='./app.js'></script>
+</body>
+
+</html>

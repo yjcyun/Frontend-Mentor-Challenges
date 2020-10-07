@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+  /* PRIMARY COLORS */
+  --primary-lime-green: hsl(163, 72%, 41%);
+  --primary-bright-red: hsl(356, 69%, 56%);
+  --facebook: hsl(208, 92%, 53%);
+  --twitter: hsl(203, 89%, 53%);
+  --instagram: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+  --youtube: hsl(348, 97%, 39%);
+  --toggle: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+
+  /* LIGHT THEME */
+  --background: hsl(0, 0%, 100%);
+  --top-cards: hsl(225, 100%, 98%);
+  --bottom-cards: hsl(227, 47%, 96%);
+  --muted-text: hsl(228, 12%, 44%);
+  --primary-text: hsl(230, 17%, 14%);
+}
+
+.dark-theme {
+  /* DARK THEME */
+  --background: hsl(230, 17%, 14%);
+  --top-cards: hsl(232, 19%, 15%);
+  --bottom-cards: hsl(228, 28%, 20%);
+  --muted-text: hsl(228, 34%, 66%);
+  --primary-text: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  max-width: 1170px;
+  margin: auto;
+  padding: 2rem 1.5rem;
+  background: var(--background);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.bold-light-text-color {
+  color: var(--muted-text);
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.small-font-size {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.up {
+  color: var(--primary-lime-green);
+}
+
+.down {
+  color: var(--primary-bright-red);
+}
+
+.dashboard__heading {
+  flex-direction: column;
+}
+
+.dashboard__heading h1 {
+  color: var(--primary-text);
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.dashboard__heading p {
+  border-bottom: 1px solid var(--muted-text);
+  padding-bottom: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Dashboard Cards */
+.dashboard__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 1rem;
+  margin: 3rem 0;
+}
+
+.card {
+  cursor: pointer;
+  padding: 1.5rem;
+  border-radius: 5px;
+  background: var(--bottom-cards);
+}
+
+.card:hover {
+  background: rgba(139, 151, 198, 0.2);
+}
+
+.dashboard__card {
+  text-align: center;
+  background: var(--bottom-cards);
+  position: relative;
+}
+
+.bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.facebook .bar {
+  background: var(--facebook);
+}
+
+.twitter .bar {
+  background: var(--twitter);
+}
+
+.instagram .bar {
+  background: var(--instagram);
+}
+
+.youtube .bar {
+  background: var(--youtube);
+}
+
+.dashboard__card__social-media .username {
+  margin-left: 0.5rem;
+}
+
+.num {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-top: 1rem;
+  color: var(--primary-text);
+}
+
+.followers {
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin-bottom: 1.4rem;
+  color: var(--muted-text);
+}
+
+.username {
+  color: var(--muted-text);
+}
+
+.status span {
+  margin-left: 5px;
+}
+
+/* Overview */
+.overview h2 {
+  font-size: 1.5rem;
+}
+
+.overview .dashboard__cards {
+  margin: 1rem 0;
+}
+
+.overview__card {
+  display: flex;
+  flex-direction: column;
+  height: 130px;
+  align-items: space-between;
+  justify-content: space-between;
+  background: var(--bottom-cards);
+}
+
+.overview .num {
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+.overview__card .status {
+  align-self: flex-end;
+}
+
+/* Toggle Theme */
+.dashboard__toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toggle-label {
+  margin-left: 0.5rem;
+  cursor: pointer;
+  width: 46px;
+  height: 24px;
+  background: var(--toggle);
+  display: block;
+  border-radius: 3rem;
+  position: relative;
+}
+
+.toggle-label::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--bottom-cards);
+  transition: 0.3s;
+  transform: translateX(0);
+}
+
+.toggle-label.toggled::after {
+  transform: translateX(21px);
+}
+
+.toggle-checkbox {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.attribution {
+  font-size: 0.8rem;
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 300;
+}
+
+.attribution a {
+  color: var(--facebook);
+  text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    padding: 0 1.5rem;
+  }
+  .dashboard__cards {
+    grid-gap: 2rem;
+  }
+  .dashboard__heading {
+    flex-direction: row;
+  }
+  .dashboard__heading h1 {
+    font-size: 2rem;
+  }
+  .dashboard__heading p {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .attribution {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 300;
+  }
+}
