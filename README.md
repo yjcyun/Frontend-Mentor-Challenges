@@ -15,3 +15,4 @@ All the solutions are hosted on Vercel.
 8. [Huddle Landing Page With Single Introductory Section](https://huddle-landing-page-with-single-introductory-section-master.yjcyun.vercel.app/)
 9. [Coding Bootcamp Testimonials Slider](https://coding-bootcamp-testimonials-slider-master-rosy-seven.vercel.app/)
 10. [Social Media Dashboard Theme Switcher](https://social-media-dashboard-with-theme-switcher-master-one.vercel.app/)
+11. [Insure Landing Page](https://insure-landing-page-master-lac.vercel.app/)
