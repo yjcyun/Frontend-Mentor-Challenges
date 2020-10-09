@@ -64,6 +64,12 @@ const solutions = [
     img: './assets/insure.jpg',
     live: 'https://insure-landing-page-master-lac.vercel.app/',
     stacks: ['HTML', 'CSS', 'JS']
+  },
+  {
+    title: 'Pricing component with toggle',
+    img: './assets/pricing.jpg',
+    live: 'https://pricing-component-with-toggle-master-swart.vercel.app/',
+    stacks: ['HTML', 'CSS', 'JS']
   }
 ]
 
@@ -101,5 +107,6 @@ window.addEventListener('DOMContentLoaded', () => {
     </div>
     `
   });
+  
   solutionCards.innerHTML = solutionCard;
 })
