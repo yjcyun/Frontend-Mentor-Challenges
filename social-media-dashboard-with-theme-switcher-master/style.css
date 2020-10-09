@@ -42,6 +42,7 @@ body {
   background: var(--background);
 }
 
+
 .flex {
   display: flex;
 }
@@ -236,6 +237,19 @@ body {
   visibility: hidden;
 }
 
+.attribution {
+  font-size: 0.8rem;
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 300;
+}
+
+.attribution a {
+  color: var(--facebook);
+  text-decoration: none;
+}
+
 @media screen and (min-width: 768px) {
   .dashboard__cards {
     grid-gap: 2rem;
@@ -250,5 +264,13 @@ body {
     border-bottom: none;
     margin-bottom: 0;
     padding-bottom: 0;
+  }
+
+  .attribution {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 300;
   }
 }

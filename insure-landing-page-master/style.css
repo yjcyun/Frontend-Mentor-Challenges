@@ -298,6 +298,22 @@ li {
   cursor: pointer;
 }
 
+.attribution {
+  font-size: 0.8rem;
+  position: absolute;
+  bottom: 1rem;
+  width: 50%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 300;
+}
+
+.attribution a {
+  color: var(--dark-violet);
+  text-decoration: none;
+}
+
 @media screen and (min-width: 996px) {
   .btn {
     border: 2px solid var(--very-dark-violet);

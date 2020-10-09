@@ -114,6 +114,15 @@ body {
   font-size: 0.9rem;
 }
 
+footer {
+  position: absolute;
+  bottom: 1rem;
+  width: 70%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 @media screen and (min-width: 768px) {
   .top {
     padding: 2.2rem;
