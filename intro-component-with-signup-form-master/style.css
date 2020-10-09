@@ -156,15 +156,6 @@ button {
   text-decoration: none;
 }
 
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 80%;
-  text-align: center;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
 @media screen and (min-width: 768px) {
   body {
     max-width: 1170px;
@@ -200,9 +191,5 @@ footer {
   .signup__button:active {
     transform: translateY(3px);
     box-shadow: 1px 0px 0px 0px rgba(48, 186, 127, 1);
-  }
-
-  footer {
-    bottom: 2rem;
   }
 }

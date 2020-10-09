@@ -102,22 +102,6 @@ img {
   cursor:pointer;
 }
 
-.attribution {
-  font-size: 0.8rem;
-  position: absolute;
-  bottom: 1rem;
-  width: 60%;
-  text-align: center;
-  left: 50%;
-  transform: translateX(-50%);
-  font-weight: 300;
-}
-
-.attribution a {
-  color: var(--dark-blue);
-  text-decoration: none;
-}
-
 @media screen and (min-width: 996px) {
   .slide {
     background-position: top 3.4rem right 4rem, bottom left;

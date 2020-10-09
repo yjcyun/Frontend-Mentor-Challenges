@@ -221,22 +221,4 @@ ul {
     background: transparent;
     color: #fff;
   }
-
-  .attribution {
-    position: absolute;
-    bottom: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
-
-.attribution {
-  font-size: 0.8rem;
-  width: 60%;
-  text-align: center;
-  margin: 0 auto 0.5rem;
-}
-
-.attribution a {
-  color: hsl(237, 63%, 64%);
 }
