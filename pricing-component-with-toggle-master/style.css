@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+:root {
+  --primary-clr: linear-gradient(
+    to right,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+  --angled-primary-clr: linear-gradient(
+    to bottom right,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+  --very-light-gray-blue: hsl(240, 78%, 98%);
+  --light-gray-blue: hsl(234, 14%, 74%);
+  --gray-blue: hsl(233, 13%, 49%);
+  --dark-gray-blue: hsl(232, 13%, 33%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  background: var(--very-light-gray-blue);
+  background-image: url('./images/bg-top.svg');
+  background-repeat: no-repeat;
+  background-position: top -3rem right -12rem;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 4rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading h1 {
+  color: var(--gray-blue);
+  text-align: center;
+}
+
+.heading span {
+  color: var(--light-gray-blue);
+}
+
+/* Toggle */
+.heading__toggle {
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.toggle-label {
+  margin: 0 1.7rem;
+  cursor: pointer;
+  width: 53px;
+  height: 30px;
+  background: var(--primary-clr);
+  display: block;
+  border-radius: 3rem;
+  position: relative;
+}
+
+.toggle-label::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  background: var(--very-light-gray-blue);
+  transition: 0.3s;
+  transform: translateX(0);
+}
+
+.toggle-label.toggled::after {
+  transform: translateX(23px);
+}
+
+.toggle-checkbox {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+/* Components */
+.components {
+  display: grid;
+}
+
+.component {
+  border-radius: 0.7rem;
+  padding: 2rem 1.5rem;
+  background: #fff;
+  color: var(--gray-blue);
+  text-align: center;
+  margin: 1rem 0;
+  width: 300px;
+}
+
+.component h4 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.price {
+  font-size: 4rem;
+  color: var(--dark-gray-blue);
+}
+
+.hide {
+  display: none;
+}
+
+.component ul {
+  margin: 2rem 0;
+}
+
+.component li {
+  border-top: 1px solid var(--light-gray-blue);
+  padding: 1rem 0;
+}
+
+.component li:last-child {
+  border-bottom: 1px solid var(--light-gray-blue);
+}
+
+.component button {
+  border: 1px solid transparent;
+  font-family: 'Montserrat', sans-serif;
+  background: var(--primary-clr);
+  color: #fff;
+  padding: 1rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.component:nth-child(2) {
+  background: var(--angled-primary-clr);
+  color: #fff;
+}
+
+.component:nth-child(2) .price {
+  color: #fff;
+}
+
+.component:nth-child(2) button {
+  background: #fff;
+  color: hsl(237, 63%, 64%);
+}
+
+@media screen and (min-width: 867px) {
+  body {
+    background-image: url('./images/bg-top.svg'), url('./images/bg-bottom.svg');
+    background-position: top right, bottom left;
+  }
+  .components {
+    grid-template-columns: repeat(3, 1fr);
+    margin: 2rem 0;
+  }
+
+  .component {
+    min-width: 270px;
+  }
+
+  .component:nth-child(2) {
+    height: 102%;
+    margin-top: -0.5rem;
+    padding-top: 3.5rem;
+  }
+
+  .component:nth-child(1) {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .component:nth-child(3) {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+  }
+
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    height: 100vh;
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  .heading h1 {
+    font-size: 2.2rem;
+  }
+
+  .component {
+    min-width: 350px;
+  }
+
+  .component button:hover {
+    border: 1px solid var(--dark-gray-blue);
+    background: #fff;
+    color: hsl(237, 63%, 64%);
+  }
+
+  .component:nth-child(2) button:hover {
+    border: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+  }
+
+  .attribution {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.attribution {
+  font-size: 0.8rem;
+  width: 60%;
+  text-align: center;
+  margin: 0 auto 0.5rem;
+}
+
+.attribution a {
+  color: hsl(237, 63%, 64%);
+}
