@@ -17,4 +17,5 @@ All the solutions are indiviually deployed on Vercel.
 10. [Social Media Dashboard Theme Switcher](https://social-media-dashboard-with-theme-switcher-master-one.vercel.app/)
 11. [Insure Landing Page](https://insure-landing-page-master-lac.vercel.app/)
 12. [Pricing Component with Toggle](https://pricing-component-with-toggle-master-swart.vercel.app/)
-12. [Project Tracking Intro Component](https://13-project-tracking-intro-component-master.vercel.app/)
+13. [Project Tracking Intro Component](https://13-project-tracking-intro-component-master.vercel.app/)
+14. [Clipboard Landing Page](https://14-clipboard-landing-page-master.vercel.app)
