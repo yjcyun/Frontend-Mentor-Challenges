@@ -87,9 +87,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
   solutions.forEach((solution) => {
     const stacks = solution.stacks.map(solution => {
-      if(solution==='HTML') {
+      if (solution === 'HTML') {
         return `<li class='html'>${solution}</li>`;
-      } else if (solution==='CSS') {
+      } else if (solution === 'CSS') {
         return `<li class='css'>${solution}</li>`;
       } else {
         return `<li class='js'>${solution}</li>`;
@@ -97,22 +97,22 @@ window.addEventListener('DOMContentLoaded', () => {
     }).join('');
 
     solutionCard += `
-    <div class='solution__card'>
-      <div class='solution__card-img'>
-        <img src=${solution.img} alt=${solution.title}>
-      </div>
-      <div class='solution__card-body'>
-        <ul class='header'>
-          ${stacks}
-        </ul>
-        <h3 class='title'>${solution.title}</h3>
-        <div class='links'>
-          <a href=${solution.live} target='_blank'>Live &#8594;</a>
+    <a href=${solution.live} target='_blank' class='link'>
+      <div class='solution__card'>
+        <div class='solution__card-img'>
+          <img src=${solution.img} alt=${solution.title}>
+        </div>
+        <div class='solution__card-body'>
+          <ul class='header'>
+            ${stacks}
+          </ul>
+          <h3 class='title'>${solution.title}</h3>
+          <span class='live'>Live &#8594;</span>
         </div>
       </div>
-    </div>
+    </a>
     `
   });
-  
+
   solutionCards.innerHTML = solutionCard;
 })

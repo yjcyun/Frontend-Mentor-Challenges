@@ -90,7 +90,7 @@ a {
   color: rgb(225, 55, 132);
 }
 
-.links a:hover {
+.link:hover .live {
   box-shadow: rgba(42, 192, 110, 1) 0px -2px inset
 }
 
