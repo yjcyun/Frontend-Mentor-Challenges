@@ -70,6 +70,12 @@ const solutions = [
     img: './assets/pricing.jpg',
     live: 'https://pricing-component-with-toggle-master-swart.vercel.app/',
     stacks: ['HTML', 'CSS', 'JS']
+  },
+  {
+    title: 'Project tracking intro component',
+    img: './assets/project-track.jpg',
+    live: 'https://13-project-tracking-intro-component-master.vercel.app/',
+    stacks: ['HTML', 'CSS', 'JS']
   }
 ]
 

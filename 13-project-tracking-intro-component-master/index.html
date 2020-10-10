@@ -1,39 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel='stylesheet' href='style.css'>
+
   <title>Frontend Mentor | Project tracking intro component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
-  Product
-  Features
-  Pricing
-  Login
+  <main class='container'>
+    <!-- navigation bar -->
+    <nav>
+      <div class='logo-container'>
+        <img src='./images/logo.svg' alt='Logo'>
+      </div>
+      <button class='nav-btn' id='nav-btn'>
+        <img src='./images/icon-hamburger.svg' alt='Menu'>
+      </button>
+      <button class='hide close-btn' id='close-btn'>
+        <img src='./images/icon-close.svg' alt='Close'>
+      </button>
+      <ul class='second-ff hide' id='nav-list'>
+        <li class='text-uppercase text-bold'>Product</li>
+        <li class='text-uppercase text-bold'>Features</li>
+        <li class='text-uppercase text-bold'>Pricing</li>
+        <li class='divider muted'></li>
+        <li class='muted text-uppercase text-bold'>Login</li>
+      </ul>
+    </nav>
+    <!-- /navigation bar -->
+    <div class='hero-bg'></div>
+    <div class='hero__img'>
+      <img src='./images/illustration-devices.svg' alt='Mockups'>
+    </div>
+    <div class='hero'>
+      <div class='hero__content'>
+        <div class='hero__content__heading'>
+          <span class='second-ff flags text-bold text-uppercase'>New</span>
+          <span class='second-ff spread'>Monograph Dashboard</span>
+        </div>
+        <h1 class='second-ff text-uppercase'>Powerful insights into your team</h1>
+        <p>Project planning and time tracking for agile teams</p>
+        <div class='hero__content__footer'>
+          <button class='second-ff text-bold text-uppercase'>Schedule a demo</button>
+          <span class='second-ff spread'>to see a live preview</span>
+        </div>
+      </div>
+     
+    </div>
+  </main>
 
-  New
-  Monograph Dashboard
-
-  Powerful insights into your team
-  Project planning and time tracking for agile teams
-
-  Schedule a demo
-  to see a live preview
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
+  <footer class="attribution">
+    <span>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"> Frontend Mentor.</a></span>
+    <span> Coded by <a href="https://christinayun.ca"> Christina Yun.</a></span>
+    
   </footer>
+
+  <script src='app.js'></script>
 </body>
+
 </html>

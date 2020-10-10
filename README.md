@@ -1,4 +1,4 @@
-# Frontend Mentor Challenges Solutions
+# Frontend Mentor Challenges Solutions👩🏽‍🎓
 
 📒 This is a collection of my [Frontend Mentor](https://www.frontendmentor.io/) solutions which can be viewed [here](https://root-page.vercel.app/)
 
