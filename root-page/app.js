@@ -76,6 +76,12 @@ const solutions = [
     img: './assets/project-track.jpg',
     live: 'https://13-project-tracking-intro-component-master.vercel.app/',
     stacks: ['HTML', 'CSS', 'JS']
+  },
+  {
+    title: 'Clipboard landing page',
+    img: './assets/clipboard.jpg',
+    live: 'https://14-clipboard-landing-page-master.vercel.app/',
+    stacks: ['HTML', 'CSS']
   }
 ]
 
