@@ -82,6 +82,12 @@ const solutions = [
     img: './assets/clipboard.jpg',
     live: 'https://14-clipboard-landing-page-master.vercel.app/',
     stacks: ['HTML', 'CSS']
+  },
+  {
+    title: 'Huddle landing page',
+    img: './assets/huddle-landing-feature.jpg',
+    live: 'https://15-huddle-landing-page-with-alternating-feature-blocks-master.vercel.app/',
+    stacks: ['HTML', 'CSS']
   }
 ]
 
