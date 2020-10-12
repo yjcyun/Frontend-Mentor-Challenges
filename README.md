@@ -19,3 +19,4 @@ All the solutions are indiviually deployed on Vercel.
 12. [Pricing Component with Toggle](https://pricing-component-with-toggle-master-swart.vercel.app/)
 13. [Project Tracking Intro Component](https://13-project-tracking-intro-component-master.vercel.app/)
 14. [Clipboard Landing Page](https://14-clipboard-landing-page-master.vercel.app)
+15. [Huddle Landing Page With Alternating Feature Blocks](https://15-huddle-landing-page-with-alternating-feature-blocks-master.vercel.app/)
