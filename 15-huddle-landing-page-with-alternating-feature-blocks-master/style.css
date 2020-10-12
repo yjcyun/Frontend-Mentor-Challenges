@@ -304,7 +304,7 @@ h3 {
   }
 
   .card {
-    padding: 3rem 4rem 3rem 7rem;
+    padding: 4rem 4rem 4rem 7rem;
     margin: 0 2rem 2rem;
     flex-direction: row;
     text-align: left;
@@ -352,7 +352,7 @@ h3 {
   }
 
   .footer__container {
-    padding: 15rem 2rem 5rem;
+    padding: 10rem 2rem 5rem;
   }
 
   .footer__content {
