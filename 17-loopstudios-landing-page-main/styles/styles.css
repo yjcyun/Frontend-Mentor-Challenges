@@ -1,0 +1,118 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Alata", sans-serif;
+  font-size: 15px;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.section-hero {
+  background-image: url("../images/desktop/image-hero.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  min-height: 500px;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .section-hero {
+    background-image: url("../images/mobile/image-hero.jpg");
+  }
+}
+
+.section-hero nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.section-hero nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .section-hero nav ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: none;
+  }
+  .section-hero nav ul.section-hero__navlist {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.section-hero nav ul li {
+  margin-left: 2rem;
+}
+
+@media (max-width: 768px) {
+  .section-hero nav ul li {
+    margin: 0.5rem 2rem;
+  }
+}
+
+.section-hero nav ul li a {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .section-hero nav ul li a {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+}
+
+.section-hero.section-hero__nav-mobile {
+  background-image: none;
+  background: black;
+}
+
+.section-hero .section-hero__menu-button {
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .section-hero .section-hero__menu-button {
+    display: block;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
