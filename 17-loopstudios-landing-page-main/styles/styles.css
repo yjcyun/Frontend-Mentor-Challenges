@@ -19,13 +19,36 @@ a {
   text-decoration: none;
 }
 
+h1,
+h2,
+h3 {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+@media (max-width: 550px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 350px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
 .section-hero {
-  background-image: url("../images/desktop/image-hero.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../images/desktop/image-hero.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/desktop/image-hero.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   min-height: 500px;
   position: relative;
 }
@@ -33,10 +56,14 @@ a {
 @media (max-width: 768px) {
   .section-hero {
     background-image: url("../images/mobile/image-hero.jpg");
+    height: 100vh;
   }
 }
 
 .section-hero nav {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -46,9 +73,19 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 3rem 2rem;
+  width: 100%;
+}
+
+@media (max-width: 1100px) {
+  .section-hero nav {
+    padding: 3rem 2rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .section-hero nav {
+    padding: 3rem 2rem;
+  }
 }
 
 .section-hero nav ul {
@@ -113,6 +150,49 @@ a {
 @media (max-width: 768px) {
   .section-hero .section-hero__menu-button {
     display: block;
+  }
+}
+
+.section-hero .section-hero__title {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 0;
+  height: calc(80vh - 164px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 1100px) {
+  .section-hero .section-hero__title {
+    padding: 3rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-hero .section-hero__title {
+    height: calc(100vh - 164px);
+  }
+}
+
+.section-hero .section-hero__title h1 {
+  text-transform: uppercase;
+  color: white;
+  max-width: 600px;
+  border: 2px solid white;
+  padding: 3rem;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 768px) {
+  .section-hero .section-hero__title h1 {
+    margin: auto;
+    width: 100%;
+    max-width: 500px;
+    padding: 1.5rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */

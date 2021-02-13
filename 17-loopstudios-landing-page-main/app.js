@@ -1,3 +1,4 @@
+// section-hero ==================================================
 const sectionHero = document.getElementById('section-hero');
 const menuButton = document.getElementById('section-hero__menu-button');
 const navList = document.getElementById('section-hero__navlist');
