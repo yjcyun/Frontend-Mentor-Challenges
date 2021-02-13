@@ -9,6 +9,19 @@
   }
 }
 
+@mixin nav-item-hover($background) {
+  content: '';
+  position: absolute;
+  width: 2rem;
+  height: 2px;
+  bottom: -0.7rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: $background;
+  opacity: 0;
+  transition: $Transition;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -33,6 +46,8 @@ h1,
 h2,
 h3 {
   font-family: $FontJosephin;
+  text-transform: uppercase;
+  font-weight: normal;
 }
 
 h1 {
@@ -43,6 +58,20 @@ h1 {
   @media (max-width: $PhoneXXS) {
     font-size: 1.5rem;
   }
+}
+h2 {
+  font-size: 2.7rem;
+  @media (max-width: $PhoneS) {
+    font-size: 1.8rem;
+  }
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p {
+  color: $DarkGray;
 }
 
 // section-hero =================================================
@@ -60,7 +89,6 @@ h1 {
     background-image: url('../images/mobile/image-hero.jpg');
     height: 100vh;
   }
-
   nav {
     @include max-width-auto;
     display: flex;
@@ -86,6 +114,13 @@ h1 {
       }
       li {
         margin-left: 2rem;
+        position: relative;
+        &:before {
+          @include nav-item-hover($White);
+        }
+        &:hover:before {
+          opacity: 1;
+        }
         @media (max-width: $Tablet) {
           margin: 0.5rem 2rem;
         }
@@ -97,6 +132,9 @@ h1 {
           }
         }
       }
+    }
+    .section-hero__logo {
+      cursor: pointer;
     }
   }
   &.section-hero__nav-mobile {
@@ -119,7 +157,6 @@ h1 {
       height: calc(100vh - 164px);
     }
     h1 {
-      text-transform: uppercase;
       color: $White;
       max-width: 600px;
       border: 2px solid $White;
@@ -132,5 +169,269 @@ h1 {
         padding: 1.5rem;
       }
     }
+  }
+}
+
+// section-vr ===================================================
+.section-vr {
+  @include max-width-auto;
+  padding-bottom: 0;
+  margin: 7rem auto;
+  position: relative;
+  @media (max-width: $Desktop) {
+    text-align: center;
+  }
+  @media (max-width: $PhoneS) {
+    margin: 3rem auto;
+  }
+  .section-vr__img-container {
+    img:last-child {
+      display: none;
+    }
+    @media (max-width: $TabletMD) {
+      img:last-child {
+        display: block;
+        width: 100%;
+      }
+      img:first-child {
+        display: none;
+      }
+    }
+  }
+  .section-vr__text {
+    padding: 5rem 0 0 5rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: white;
+    max-width: 520px;
+    @media (max-width: $Desktop) {
+      position: relative;
+      text-align: center;
+      padding: 0;
+      margin: 4rem auto 0;
+    }
+    @media (max-width: $PhoneS) {
+      position: relative;
+      text-align: center;
+      padding: 0;
+      margin: 2.5rem auto 0;
+    }
+    h2 {
+      margin-bottom: 2rem;
+    }
+    p {
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+  }
+}
+
+// section-creation =============================================
+.section-creation {
+  @include max-width-auto;
+  .section-creation__heading {
+    display: flex;
+    justify-content: space-between;
+
+    h2 {
+      @media (max-width: $TabletMD) {
+        margin: auto;
+      }
+    }
+    button {
+      @media (max-width: $TabletMD) {
+        display: none;
+      }
+    }
+  }
+  .section-creation__grid__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+    margin-top: 5rem;
+    @media (max-width: $TabletMD) {
+      grid-template-columns: 1fr;
+      margin-top: 3rem;
+      grid-gap: 1rem;
+    }
+    .section-creation__grid__item {
+      position: relative;
+      height: fit-content;
+      img {
+        width: 100%;
+        &:first-child {
+          display: block;
+        }
+        &:nth-child(2) {
+          display: none;
+        }
+        @media (max-width: $TabletMD) {
+          &:first-child {
+            display: none;
+          }
+          &:nth-child(2) {
+            display: block;
+          }
+        }
+      }
+      .section-creation__grid__item__text {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0) 40%,
+          rgba(0, 0, 0, 0.8)
+        );
+        transition: $Transition;
+        h3 {
+          display: flex;
+          align-items: flex-end;
+          height: 100%;
+          color: $White;
+          padding: 2.2rem;
+          @media (max-width: $TabletLG) {
+            padding: 1rem;
+          }
+          @media (max-width: $TabletMD) {
+            font-size: 2rem;
+            padding: 2.2rem;
+            max-width: 250px;
+          }
+          @media (max-width: $PhoneS) {
+            font-size: 1.5rem;
+            padding: 1.8rem;
+            max-width: 190px;
+          }
+        }
+      }
+      &:hover {
+        .section-creation__grid__item__text {
+          background: rgba(255, 255, 255, 0.7);
+          h3 {
+            color: $Black;
+          }
+        }
+      }
+    }
+  }
+  button {
+    padding: 0 2.5rem;
+    text-transform: uppercase;
+    font-family: inherit;
+    letter-spacing: 3px;
+    border: 1px solid $Black;
+    border-radius: 2px;
+    background: $White;
+    font-weight: bold;
+    height: 43px;
+    cursor: pointer;
+    transition: $Transition;
+    &:focus {
+      outline: none;
+    }
+    &:hover {
+      background: $Black;
+      color: $White;
+    }
+  }
+  .section-creation__bottom__button {
+    display: none;
+    @media (max-width: $TabletMD) {
+      display: block;
+      margin: 3rem auto;
+    }
+  }
+}
+
+// footer =======================================================
+// attribution ==================================================
+footer {
+  background: $Black;
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: $Desktop) {
+    padding: 4rem 2rem;
+  }
+  @media (max-width: $TabletMD) {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer__left,
+  .footer__right {
+    @include max-width-auto;
+    padding: 2rem 0;
+    @media (max-width: $Desktop) {
+      padding: 0;
+    }
+  }
+  .footer__left {
+    .footer__left__logo {
+      margin-bottom: 1rem;
+      cursor: pointer;
+      img {
+        width: 170px;
+      }
+    }
+    ul {
+      display: flex;
+      @media (max-width: $TabletMD) {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+      li {
+        margin-right: 1.7rem;
+        position: relative;
+        &:before {
+          @include nav-item-hover($White);
+        }
+        &:hover:before {
+          opacity: 1;
+        }
+        a {
+          color: $White;
+        }
+        @media (max-width: $TabletMD) {
+          margin: 0.8rem 0;
+        }
+      }
+    }
+  }
+  .footer__right {
+    .footer__right__social {
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      li {
+        margin-left: 0.7rem;
+        position: relative;
+        cursor: pointer;
+        &:before {
+          @include nav-item-hover($White);
+        }
+        &:hover:before {
+          opacity: 1;
+        }
+        @media (max-width: $TabletMD) {
+          margin: 0 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+// attribution ==================================================
+.attribution {
+  color: $DarkGray;
+  text-align: center;
+  a {
+    color: $VeryDarkGray;
   }
 }
